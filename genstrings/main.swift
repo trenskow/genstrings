@@ -11,11 +11,6 @@ import Foundation
 
 let exp = try! NSRegularExpression(pattern: "(?<=\")([^\"]*)(?=\".(localize\\((\\\"(.*?)\\\")?\\)))", options: [])
 
-func printErr(_ string: String) {
-    let stderr = FileHandle.standardError
-    stderr.write("\(string)\n".data(using: .utf8)!)
-}
-
 func findFiles(path: String) throws -> [String] {
     return try FileManager.default.contentsOfDirectory(atPath: path).reduce([], { (result, subpath) -> [String] in
         var isDirectory: ObjCBool = false
@@ -34,7 +29,6 @@ var path: String? = nil
 if CommandLine.arguments.count > 1 {
     path = CommandLine.arguments[1]
 }
-
 
 try findFiles(path: path ?? FileManager.default.currentDirectoryPath)
 .map { (path) -> [(String, String?)] in
