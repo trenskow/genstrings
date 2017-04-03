@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F8A486837F62AEE1093A0E7622FD3AE94293EC26",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "16189E4E1552243390F7A26EC9534210A4DF1A3E" : 9223372036854775807,
+    "F8A486837F62AEE1093A0E7622FD3AE94293EC26" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "8843FE5C-7ADB-4247-A3B3-5DB1285D0896",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "16189E4E1552243390F7A26EC9534210A4DF1A3E" : "..",
+    "F8A486837F62AEE1093A0E7622FD3AE94293EC26" : "genstrings\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "genstrings",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "genstrings.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/trenskow\/au-evacuate-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "16189E4E1552243390F7A26EC9534210A4DF1A3E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/trenskow\/genstrings",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F8A486837F62AEE1093A0E7622FD3AE94293EC26"
+    }
+  ]
+}

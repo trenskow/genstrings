@@ -30,7 +30,7 @@ if CommandLine.arguments.count > 1 {
     path = CommandLine.arguments[1]
 }
 
-try findFiles(path: path ?? FileManager.default.currentDirectoryPath)
+FileHandle.standardOutput.write(try findFiles(path: path ?? FileManager.default.currentDirectoryPath)
 .map { (path) -> [(String, String?)] in
     
     let data = try! Data(contentsOf: URL(fileURLWithPath: path))
@@ -57,10 +57,11 @@ try findFiles(path: path ?? FileManager.default.currentDirectoryPath)
     guard !result.contains(where: { $0.0 == strings.0 }) else { return result }
     return result + [strings]
 }
-.forEach { (strings) in
+.map { (strings) in
     let string = strings.0.components(separatedBy: "\"").joined(separator: "\\\"")
     let comment = strings.1 ?? "No comment provided by engineer"
-    print()
-    print("/* \(comment) */")
-    print("\"\(string)\" = \"\(string)\";")
+    return ["", "/* \(comment) */", "\"\(string)\" = \"\(string)\";"]
 }
+.reduce([], +)
+.joined(separator: "\n")
+.data(using: .utf16BigEndian)!)
